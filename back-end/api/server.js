@@ -6,8 +6,8 @@ const app = express();
 app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
-app.get('/test', (_req, res) => {
-  res.status(200).json({ message: 'Tudo certo!' })
-});
+const { test } = require('../api/routes');
+
+app.get('/test', test)
 
 module.exports = app;
