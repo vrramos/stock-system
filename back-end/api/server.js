@@ -17,4 +17,7 @@ app.post('/product', createProductValid, register);
 app.put('/product/:id', updateProduct);
 app.delete('/product/:id', deleteProduct);
 
+app.use('*', (_req, res) => res.status(404).json({ message: 'Página não encontrada' }));
+
 module.exports = app;
+

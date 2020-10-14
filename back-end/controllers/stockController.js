@@ -27,5 +27,5 @@ exports.updateProduct = async (req, res) => {
 exports.deleteProduct = async (req, res) => {
   updateProduct = await new StockModel().delete(req.params.id);
 
-  res.status(200).json({ message: "Produto Deletado." });
+  res.status(200).json({ message: "Produto Deletado" });
 };
