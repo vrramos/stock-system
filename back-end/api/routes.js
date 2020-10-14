@@ -1,5 +1,5 @@
 const { listAllProducts, register, getProduct } = require('../controllers/stockController');
-const { updateProduct, deleteProduct } = require('../controllers/stockController'); updateProduct
+const { updateProduct, deleteProduct } = require('../controllers/stockController');
 
 module.exports = {
   listAllProducts,

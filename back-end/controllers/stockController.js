@@ -21,7 +21,7 @@ exports.getProduct = async (req, res) => {
 exports.updateProduct = async (req, res) => {
   updateProduct = await new StockModel().updateProductById(req.params.id, req.body);
 
-  res.status(200).json({ message: "Produto Atualizado." });
+  res.status(200).json({ message: "Produto Atualizado" });
 };
 
 exports.deleteProduct = async (req, res) => {
