@@ -6,8 +6,13 @@ const app = express();
 app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
-const { test } = require('../api/routes');
+const { listAllProducts, register, getProduct } = require('../api/routes');
+const { updateProduct, deleteProduct } = require('../api/routes'); updateProduct
 
-app.get('/test', test)
+app.get('/products', listAllProducts);
+app.get('/product/:id', getProduct);
+app.post('/product', register);
+app.put('/product/:id', updateProduct);
+app.delete('/product/:id', deleteProduct);
 
 module.exports = app;
