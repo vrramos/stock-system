@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import useAxios from 'axios-hooks';
 import { Link } from 'react-router-dom';
 import OneProductCard from '../components/OneProductCard';
@@ -24,7 +24,7 @@ function OneProduct({ match: { params: { id } } }) {
           <OneProductCard data={data} />
         </div>
       </section>
-      <UpdateProduct data={data}/>
+      <UpdateProduct data={data} id={id}/>
     </section>
   )
 }

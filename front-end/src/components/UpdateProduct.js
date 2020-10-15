@@ -10,23 +10,24 @@ function formsUpdate(id, label, type, value, set) {
   )
 }
 
-function Update(name, quantity, unityPrice) {
-  axios.put(`http://localhost:3001/product/1`, { productName: name, quantity, unityPrice }).then(response => {
+function Update(productName, quantity, unityPrice, id) {
+  axios.put(`http://localhost:3001/product/${id}`, { productName, quantity, unityPrice }).then(response => {
     console.log(response)
   })
+  window.location.reload();
 }
 
 function UpdateProduct({ data }) {
-  const [name, setName] = useState(data.productName);
+  const [productName, setProductName] = useState(data.productName);
   const [quantity, setQuantity] = useState(data.quantity);
   const [unityPrice, setUnityPrice] = useState(data.unityPrice);
 
   return (
     <div>
-      {formsUpdate('name', 'Nome do Produto: ', 'text', name, setName)};
+      {formsUpdate('name', 'Nome do Produto: ', 'text', productName, setProductName)};
       {formsUpdate('quantity', 'Quantidade: ', 'number', quantity, setQuantity)};
       {formsUpdate('unityPrice', 'Preço: ', 'number', unityPrice, setUnityPrice)};
-      <button type="button" onClick={() => Update(name, quantity, unityPrice)}>Enviar</button>
+      <button type="button" onClick={() => Update(productName, quantity, unityPrice, data.id)}>Enviar</button>
     </div>
   )
 }
