@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import DeleteProduct from '../components/DeleteProduct';
 import '../styles/card.css'
 
 function ProductCard({ index, data }) {
@@ -10,8 +11,8 @@ function ProductCard({ index, data }) {
       <h2>{productName}</h2>
       <h3>{quantity} unidades</h3>
       <h3>R${unityPrice}</h3>
-      <Link to={`/product/${id}`}><button className="card btn">Editar</button></Link>
-      <button className="card btn">Excluir</button>
+      <Link to={`/product/${id}`}><button>Editar</button></Link>
+      <DeleteProduct id={id}/>
     </section>
   )
 }
