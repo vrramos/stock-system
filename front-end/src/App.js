@@ -1,5 +1,5 @@
 import React from 'react';
-import Teste from './pages/teste';
+import Teste from './pages/Home';
 import './styles/App.css';
 
 function App() {

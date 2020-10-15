@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import useAxios from 'axios-hooks';
+import ProductCard from '../components/ProductCard';
 
 function Teste() {
   const [{ data, loading, error }, refetch] = useAxios(
@@ -12,7 +13,7 @@ function Teste() {
   return (
     <div>
       <button onClick={refetch}>Atualizar</button>
-      <pre>{JSON.stringify(data, null, 2)}</pre>
+      <ul>{data.map((products, index) => <ProductCard key={products.id} index={index} data={data} />)}</ul>
     </div>
   )
 }
