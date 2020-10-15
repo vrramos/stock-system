@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import useAxios from 'axios-hooks';
 import { Link } from 'react-router-dom';
 import OneProductCard from '../components/OneProductCard';
