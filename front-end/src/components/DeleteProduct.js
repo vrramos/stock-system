@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import '../styles/card.css';
 
 function Delete(id) {
   axios.delete(`http://localhost:3001/product/${id}`).then(response => {
@@ -11,7 +12,7 @@ function Delete(id) {
 function DeleteProduct({ id }) {
   return (
     <div>
-      <button type="button" onClick={() => Delete(id)}>Excluir</button>
+      <button className="btn" type="button" onClick={() => Delete(id)}>Excluir</button>
     </div>
   )
 }

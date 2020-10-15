@@ -24,10 +24,10 @@ function UpdateProduct({ data }) {
 
   return (
     <div>
-      {formsUpdate('name', 'Nome do Produto: ', 'text', productName, setProductName)};
-      {formsUpdate('quantity', 'Quantidade: ', 'number', quantity, setQuantity)};
-      {formsUpdate('unityPrice', 'Preço: ', 'number', unityPrice, setUnityPrice)};
-      <button type="button" onClick={() => Update(productName, quantity, unityPrice, data.id)}>Enviar</button>
+      {formsUpdate('name', 'Nome do Produto: ', 'text', productName, setProductName)}
+      {formsUpdate('quantity', 'Quantidade: ', 'number', quantity, setQuantity)}
+      {formsUpdate('unityPrice', 'Preço: ', 'number', unityPrice, setUnityPrice)}
+      <button className="button" type="button" onClick={() => Update(productName, quantity, unityPrice, data.id)}>Enviar</button>
     </div>
   )
 }

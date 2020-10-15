@@ -1,0 +1,23 @@
+.form {
+  background-color: #eee;
+  font-family: Helvetica, Arial, sans-serif;
+  max-width: 600px;
+  padding: 25px;
+}
+
+.field {
+  border: 1px solid #ccc;
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 10px;
+}
+
+@media (max-width: 29.3125rem) {
+  .label-email {
+    margin-top: 20px;
+  }
+}
+
+.label-message {
+  margin-top: 20px;
+}

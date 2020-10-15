@@ -1,9 +1,11 @@
 import React from 'react';
 import useAxios from 'axios-hooks';
 import { Link } from 'react-router-dom';
+
 import OneProductCard from '../components/OneProductCard';
-import '../styles/listProduct.css';
 import UpdateProduct from '../components/UpdateProduct';
+
+import '../styles/buttons.css';
 
 function OneProduct({ match: { params: { id } } }) {
   const [{ data, loading, error }, refetch] = useAxios(
@@ -15,16 +17,18 @@ function OneProduct({ match: { params: { id } } }) {
 
   return (
     <section>
-      <Link to="/">
-        <button>Início</button>
-      </Link>
-      <section className="Products">
-        <button onClick={refetch}>Atualizar</button>
-        <div className="list-product">
+      <div className="container space-between">
+        <Link to="/">
+          <button className="button">Início</button>
+        </Link>
+        <button className="button" onClick={refetch}>Atualizar</button>
+      </div>
+      <section>
+        <div>
           <OneProductCard data={data} />
         </div>
       </section>
-      <UpdateProduct data={data} id={id}/>
+      <UpdateProduct data={data} id={id} />
     </section>
   )
 }
