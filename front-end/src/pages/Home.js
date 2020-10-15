@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import useAxios from 'axios-hooks';
 import ProductCard from '../components/ProductCard';
+import '../styles/listProduct.css';
 
 function Teste() {
   const [{ data, loading, error }, refetch] = useAxios(
@@ -11,10 +12,12 @@ function Teste() {
   if (error) return <p>Error</p>;
   
   return (
-    <div>
+    <section className="Products">
       <button onClick={refetch}>Atualizar</button>
-      <ul>{data.map((products, index) => <ProductCard key={products.id} index={index} data={data} />)}</ul>
-    </div>
+      <div className="list-product">
+        <ul>{data.map((products, index) => <ProductCard key={products.id} index={index} data={data} />)}</ul>
+      </div>
+    </section>
   )
 }
 
