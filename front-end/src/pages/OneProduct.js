@@ -3,6 +3,7 @@ import useAxios from 'axios-hooks';
 import { Link } from 'react-router-dom';
 import OneProductCard from '../components/OneProductCard';
 import '../styles/listProduct.css';
+import UpdateProduct from '../components/UpdateProduct';
 
 function OneProduct({ match: { params: { id } } }) {
   const [{ data, loading, error }, refetch] = useAxios(
@@ -11,7 +12,6 @@ function OneProduct({ match: { params: { id } } }) {
 
   if (loading) return <h2>Loading</h2>
   if (error) return <p>Error</p>;
-
 
   return (
     <section>
@@ -24,6 +24,7 @@ function OneProduct({ match: { params: { id } } }) {
           <OneProductCard data={data} />
         </div>
       </section>
+      <UpdateProduct data={data}/>
     </section>
   )
 }

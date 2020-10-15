@@ -10,7 +10,7 @@ function ProductCard({ index, data }) {
       <h2>{productName}</h2>
       <h3>{quantity} unidades</h3>
       <h3>R${unityPrice}</h3>
-      <Link to={`/edit/${id}`}><button className="card btn">Editar</button></Link>
+      <Link to={`/product/${id}`}><button className="card btn">Editar</button></Link>
       <button className="card btn">Excluir</button>
     </section>
   )
