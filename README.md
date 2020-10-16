@@ -47,3 +47,37 @@
    npm start
    ```
 ## Documentação da API
+### GET /products
+   - Retorna todos os produtos cadastrados:
+```json
+[
+  {
+    "id": 1,
+    "productName": "Playstation 5",
+    "quantity": 300,
+    "unityPrice": "5000.00"
+  },
+  {
+    "id": 2,
+    "productName": "Xbox Series X",
+    "quantity": 350,
+    "unityPrice": "4500.00"
+  },
+  {
+    "id": 3,
+    "productName": "Controle T4W",
+    "quantity": 600,
+    "unityPrice": "250.00"
+  }
+]
+```
+### GET /product/:id
+   - Retorna o produto específico pelo ID:
+   ```json
+   {
+  "id": 1,
+  "productName": "Playstation 5",
+  "quantity": 300,
+  "unityPrice": "5000.00"
+   }
+   ```
