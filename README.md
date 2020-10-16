@@ -34,3 +34,13 @@
    npm start
    ```
 # Front-end
+   - Entre na pasta front-end
+   - Instalar dependências:
+   ```
+   npm install
+   ```
+   Para rodar o servidor, apenas digite:
+   ```
+   npm start
+   ```
+# Documentação da API
