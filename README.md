@@ -81,3 +81,39 @@
     "unityPrice": "5000.00"
    }
    ```
+   - Caso passe um id de produto que não está cadastrado, retorna um erro 401:
+   ```json
+   {
+    "message": "Produto não cadastrado"
+   }
+   ```
+### POST /product
+   - Para cadastrar algum produto coloque no body os campos:
+   ```
+   {
+    "productName": "Nintendo 64",
+    "quantity": 500,
+    "unityPrice": 900.00
+   }
+   ```
+   - Caso não coloque algums dos campos, retorna um erro 401:
+   ```json
+   {
+    "message": "Campos Inválidos"
+   }
+   ```
+   - Se tudo estiver correto, retorna 200: 
+   ```json
+   {
+    "message": "Produto Cadastrado" 
+   }
+   ```
+### put /product/:id
+   - Para atualizar algum produto coloque no body os campos:
+   ```
+   {
+    "productName": "Nintendo 64",
+    "quantity": 500,
+    "unityPrice": 900.00
+   }
+   ```
