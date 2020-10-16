@@ -30,7 +30,7 @@ class StockModel {
     if (!productId) return false;
 
     productId.destroy();
-    return;
+    return productId;
   }
 }
 
