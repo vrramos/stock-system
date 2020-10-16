@@ -75,9 +75,9 @@
    - Retorna o produto específico pelo ID:
    ```json
    {
-  "id": 1,
-  "productName": "Playstation 5",
-  "quantity": 300,
-  "unityPrice": "5000.00"
+    "id": 1,
+    "productName": "Playstation 5",
+    "quantity": 300,
+    "unityPrice": "5000.00"
    }
    ```
