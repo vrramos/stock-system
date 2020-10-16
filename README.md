@@ -1,5 +1,5 @@
-# Back-end
 ## Instalando dependências necessárias:
+### Back-end
  - Entre na pasta back-end/
  - rode o comando abaixo para instalar as dependências: 
    ```
@@ -33,7 +33,7 @@
    ```
    npm start
    ```
-# Front-end
+### Front-end
    - Entre na pasta front-end
    - Instalar dependências:
    ```
@@ -43,4 +43,4 @@
    ```
    npm start
    ```
-# Documentação da API
+## Documentação da API
