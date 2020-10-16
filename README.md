@@ -15,12 +15,15 @@
    DB_HOST=127.0.0.1
    DB_DIALECT=mysql
    ```
-   - Abra o MySQL e crie um banco de dados com o nome **stock_system**.
-   - Rode o comandos abaixo para criar a tabela:
+   - Abra o MySQL no terminal ou o MySQL Workbench e rode o comando para criar um banco de dados:
+   ```
+   CREATE DATABASE IF NOT EXISTS stock_system;
+   ```
+   - Ainda na raiz do back-end/ rode o comandos abaixo para criar a tabela:
    ```
    npx sequelize db:migrate
    ```
-   - Rode o comando para popular o banco com alguns produtos padrão:
+   - Para popular o banco com alguns produtos padrão:
    ```
    npx sequelize db:seed:all
    ```
@@ -29,7 +32,7 @@
    npx sequelize db:migrate:undo
    npx sequelize db:seed:undo:all
    ```
-   - Para iniciar o servidor, apenas digite na raiz da pasta back-end:
+   - Para iniciar o servidor:
    ```
    npm start
    ```
