@@ -1,3 +1,4 @@
+# Back-end
 ## Instalando dependências necessárias:
  - Entre na pasta back-end/
  - rode o comando abaixo para instalar as dependências: 
@@ -15,13 +16,21 @@
    DB_DIALECT=mysql
    ```
    - Abra o MySQL e crie um banco de dados com o nome **stock_system**.
-   - Rode os comandos abaixo para criar as tabelas e popular com alguns produtos.
+   - Rode o comandos abaixo para criar a tabela:
    ```
    npx sequelize db:migrate
-   sequelize db:seed:all
+   ```
+   - Rode o comando para popular o banco com alguns produtos padrão:
+   ```
+   npx sequelize db:seed:all
    ```
    - Caso necessite desfazer os comandos acima:
    ```
    npx sequelize db:migrate:undo
    npx sequelize db:seed:undo:all
    ```
+   - Para iniciar o servidor, apenas digite na raiz da pasta back-end:
+   ```
+   npm start
+   ```
+# Front-end
