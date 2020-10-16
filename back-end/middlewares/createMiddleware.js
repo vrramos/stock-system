@@ -8,7 +8,7 @@ exports.createProductValid = (req, res, next) => {
     || !isQuantityOrPriceValid(quantity)
     || !isQuantityOrPriceValid(unityPrice)
   )
-    res.status(401).json({ message: "Fields Invalid" });
+    res.status(401).json({ message: "Campos Inválidos" });
 
   next();
 }
