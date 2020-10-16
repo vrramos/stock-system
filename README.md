@@ -96,7 +96,7 @@
     "unityPrice": 900.00
    }
    ```
-   - Caso não coloque algums dos campos, retorna um erro 401:
+   - Caso não coloque alguns dos campos, retorna um erro 401:
    ```json
    {
     "message": "Campos Inválidos"
