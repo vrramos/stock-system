@@ -84,11 +84,7 @@
    - Caso passe um id de produto que não está cadastrado, retorna um erro 401:
    ```json
    {
-<<<<<<< HEAD
     "message": "Produto não cadastrado"
-=======
-    "message": "Produto não encontrado"
->>>>>>> 339146fafe93091ef432938c73bf9daadde29fb4
    }
    ```
 ### POST /product
@@ -100,7 +96,7 @@
     "unityPrice": 900.00
    }
    ```
-   - Caso não coloque algums dos campos, retorna um erro 401:
+   - Caso não coloque alguns dos campos, retorna um erro 401:
    ```json
    {
     "message": "Campos Inválidos"
