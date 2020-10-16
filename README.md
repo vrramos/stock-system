@@ -84,7 +84,7 @@
    - Caso passe um id de produto que não está cadastrado, retorna um erro 401:
    ```json
    {
-    "message": "Produto não cadastrado"
+    "message": "Produto não encontrado"
    }
    ```
 ### POST /product
@@ -108,12 +108,37 @@
     "message": "Produto Cadastrado" 
    }
    ```
-### put /product/:id
+### PUT /product/:id
    - Para atualizar algum produto coloque no body os campos:
    ```
    {
     "productName": "Nintendo 64",
     "quantity": 500,
     "unityPrice": 900.00
+   }
+   ```
+   - Caso passe um id de produto que não está cadastrado, retorna um erro 401:
+   ```json
+   {
+    "message": "Produto não encontrado"
+   }
+   ```
+   - Se tudo estiver correto, retorna 200: 
+   ```json
+   {
+    "message": "Produto Atualizado" 
+   }
+   ```
+### DELETE /product/:id
+   - Para deletar algum produto apenas chame a URL, e esse será o retorno:
+   ```json
+   {
+    "message": "Produto Deletado"
+   }
+   ```
+   - Caso passe um id de produto que não está cadastrado, retorna um erro 401:
+   ```json
+   {
+    "message": "Produto não encontrado"
    }
    ```
