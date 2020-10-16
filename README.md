@@ -84,11 +84,7 @@
    - Caso passe um id de produto que não está cadastrado, retorna um erro 401:
    ```json
    {
-<<<<<<< HEAD
     "message": "Produto não cadastrado"
-=======
-    "message": "Produto não encontrado"
->>>>>>> 339146fafe93091ef432938c73bf9daadde29fb4
    }
    ```
 ### POST /product
